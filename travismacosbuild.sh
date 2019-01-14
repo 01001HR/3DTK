@@ -5,6 +5,8 @@ set -eu
 
 echo "travis_fold:start:brew_install"
 	#uninstall python numpy because is not compatible with brew opencv
+	brew update || true
+	brew update
 	/usr/bin/yes | pip2 uninstall numpy
 	# update brew
 	brew tap brewsci/science
